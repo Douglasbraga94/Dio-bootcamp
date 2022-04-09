@@ -14,3 +14,18 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+
+$('.video').click(function(){
+    var idVideo = $(this).data('id');
+    var video = $('#video_'+idVideo).html();
+    $('#modal_video').html(video);
+    $('main').css("display", "none")
+    $('header').css("display", "none")
+  });
+
+fechar = () =>{
+    $('main').css("display", "block")
+    $('header').css("display", "block")
+    $('#modal_video').css("display", "none")
+    $('#modal_video').attr("src","");
+}
